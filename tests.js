@@ -50,4 +50,28 @@ describe('sayHello', function() {
     it('sayHello("Pat") should return "Hello, Pat!".', function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
+    it('sayHello() should return "Hello, World!".', function() {
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it('sayHello(true) should return "Hello, World!" because a boolean is not a valid string.', function() {
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('sayHello(false) should return "Hello, World!" because a boolean is not a valid string.', function() {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('sayHello(null) should return "Hello, World!" because null is not a valid string.', function() {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('sayHello(24) should return "Hello, World!" because 24 is not a valid string.', function() {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('sayHello("24") should return "Hello, World!" because "24" is not a valid string.', function() {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('sayHello("3.5") should return "Hello, World!" because "3.5" is not a valid string.', function() {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('sayHello("") should return "Hello, World!" because "" is not a valid string.', function() {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
 });
