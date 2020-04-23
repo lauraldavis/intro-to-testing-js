@@ -110,4 +110,10 @@ describe('isFive', function() {
     it('should return false when passed an object as input', function() {
         expect(isFive({count: 5})).toBe(false);
     });
+    it('should return false when called without any input', function() {
+        expect(isFive()).toBe(false);
+    });
+    it('should return false when passed "" as input', function() {
+        expect(isFive("")).toBe(false);
+    });
 });
