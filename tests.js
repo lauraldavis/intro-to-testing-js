@@ -14,7 +14,7 @@ describe('helloWorld', function() {
     });
 });
 
-/* Example unit tests for the isNumeric function
+/* Example of building unit tests for the isNumeric function
 describe('isNumeric', function() {
     it('should be a defined function', function() {
         expect(typeof isNumeric).toBe('function');
