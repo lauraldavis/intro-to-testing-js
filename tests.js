@@ -13,3 +13,29 @@ describe('helloWorld', function() {
       expect(helloWorld()).not.toBe(undefined);
     });
 });
+
+/* Example unit tests for the isNumeric function
+describe('isNumeric', function() {
+    it('should be a defined function', function() {
+        expect(typeof isNumeric).toBe('function');
+    });
+    it('should return a boolean value when called', function() {
+        expect(typeof isNumeric()).toBe("boolean");
+    });
+    it('should return true when a numeric value parameter is passed', function() {
+        expect(helloWorld(2)).toBe(false);
+    });
+    it('should return false when a boolean true parameter is passed', function() {
+        expect(helloWorld(true)).toBe(false);
+    });
+    it("should return true when a number (including a numeric string) parameter is passed", function() {
+        expect(helloWorld("5")).toBe(true);
+    });
+});
+ */
+
+describe('sayHello', function() {
+    it('should be a defined function', function() {
+        expect(typeof sayHello).toBe('function');
+    });
+});
