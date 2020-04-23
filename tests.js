@@ -74,8 +74,8 @@ describe('sayHello', function() {
     it('sayHello("") should return "Hello, World!" when passed an empty string ("") as input.', function() {
         expect(sayHello("")).toBe("Hello, World!");
     });
-    it('sayHello([1, 2, 3]) should return "Hello, World!" when passed an array as input.', function() {
-        expect(sayHello([1, 2, 3])).toBe("Hello, World!");
+    it('sayHello(["a","b","c"]) should return "Hello, World!" when passed an array as input.', function() {
+        expect(sayHello(["a","b","c"])).toBe("Hello, World!");
     });
     it('sayHello({}) should return "Hello, World!" when passed an object as input.', function() {
         expect(sayHello({})).toBe("Hello, World!");
@@ -89,19 +89,25 @@ describe('isFive', function() {
     it('should return a boolean value when called', function() {
         expect(typeof isFive()).toBe("boolean");
     });
-    it('should return true when passed the value 5', function() {
+    it('should return true when passed 5 as input', function() {
        expect(isFive(5)).toBe(true);
     });
-    it('should return true when passed the value "5"', function() {
+    it('should return true when passed "5" as input', function() {
         expect(isFive("5")).toBe(true);
     });
-    it('should return false when passed the boolean true', function() {
+    it('should return false when passed a boolean as input', function() {
         expect(isFive(true)).toBe(false);
     });
-    it('should return false when passed the value 55', function() {
+    it('should return false when passed 55 as input', function() {
         expect(isFive(55)).toBe(false);
     });
-    it('should return false when passed the value null', function() {
+    it('should return false when passed null as input', function() {
         expect(isFive(null)).toBe(false);
+    });
+    it('should return false when passed an array as input', function() {
+        expect(isFive([5])).toBe(false);
+    });
+    it('should return false when passed an object as input', function() {
+        expect(isFive({count: 5})).toBe(false);
     });
 });
