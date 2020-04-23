@@ -50,28 +50,58 @@ describe('sayHello', function() {
     it('sayHello("Pat") should return "Hello, Pat!".', function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
-    it('sayHello() should return "Hello, World!".', function() {
+    it('sayHello() should return "Hello, World!" when passed no input.', function() {
         expect(sayHello()).toBe("Hello, World!");
     });
-    it('sayHello(true) should return "Hello, World!" because a boolean is not a valid string.', function() {
+    it('sayHello(true) should return "Hello, World!" when passed boolean inputs.', function() {
         expect(sayHello(true)).toBe("Hello, World!");
     });
-    it('sayHello(false) should return "Hello, World!" because a boolean is not a valid string.', function() {
+    it('sayHello(false) should return "Hello, World!" when passed boolean inputs.', function() {
         expect(sayHello(false)).toBe("Hello, World!");
     });
-    it('sayHello(null) should return "Hello, World!" because null is not a valid string.', function() {
-        expect(sayHello(false)).toBe("Hello, World!");
+    it('sayHello(null) should return "Hello, World!" when passed null as input.', function() {
+        expect(sayHello(null)).toBe("Hello, World!");
     });
-    it('sayHello(24) should return "Hello, World!" because 24 is not a valid string.', function() {
-        expect(sayHello(false)).toBe("Hello, World!");
+    it('sayHello(24) should return "Hello, World!" when passed 24 as input.', function() {
+        expect(sayHello(24)).toBe("Hello, World!");
     });
-    it('sayHello("24") should return "Hello, World!" because "24" is not a valid string.', function() {
-        expect(sayHello(false)).toBe("Hello, World!");
+    it('sayHello("24") should return "Hello, World!" when passed "24" as input.', function() {
+        expect(sayHello("24")).toBe("Hello, World!");
     });
-    it('sayHello("3.5") should return "Hello, World!" because "3.5" is not a valid string.', function() {
-        expect(sayHello(false)).toBe("Hello, World!");
+    it('sayHello("3.5") should return "Hello, World!" when passed "3.5" as input.', function() {
+        expect(sayHello("3.5")).toBe("Hello, World!");
     });
-    it('sayHello("") should return "Hello, World!" because "" is not a valid string.', function() {
-        expect(sayHello(false)).toBe("Hello, World!");
+    it('sayHello("") should return "Hello, World!" when passed an empty string ("") as input.', function() {
+        expect(sayHello("")).toBe("Hello, World!");
+    });
+    it('sayHello([1, 2, 3]) should return "Hello, World!" when passed an array as input.', function() {
+        expect(sayHello([1, 2, 3])).toBe("Hello, World!");
+    });
+    it('sayHello({}) should return "Hello, World!" when passed an object as input.', function() {
+        expect(sayHello({})).toBe("Hello, World!");
+    });
+});
+
+describe('isFive', function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return a boolean value when called', function() {
+        expect(typeof isFive()).toBe("boolean");
+    });
+    it('should return true when passed the value 5', function() {
+       expect(isFive(5)).toBe(true);
+    });
+    it('should return true when passed the value "5"', function() {
+        expect(isFive("5")).toBe(true);
+    });
+    it('should return false when passed the boolean true', function() {
+        expect(isFive(true)).toBe(false);
+    });
+    it('should return false when passed the value 55', function() {
+        expect(isFive(55)).toBe(false);
+    });
+    it('should return false when passed the value null', function() {
+        expect(isFive(null)).toBe(false);
     });
 });

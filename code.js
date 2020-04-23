@@ -5,9 +5,13 @@ function helloWorld() {
 
 // sayHello function
 function sayHello(input) {
-        if (input === undefined || typeof input !== "string") {
-            return "Hello, World!";
-        } else {
+        if ( typeof input === "string" && isNaN(parseFloat(input)) && input !== "" ) {
             return "Hello, " + input + "!";
+        } else {
+            return "Hello, World!";
         }
+}
+
+function isFive(input) {
+    return input == 5;
 }
