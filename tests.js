@@ -162,3 +162,12 @@ describe('isEven', function() {
         expect(isEven({6:6})).toBe(false);
     });
 });
+
+describe('isVowel', function() {
+    it('should be a defined function', function() {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return a boolean value when called', function() {
+        expect(typeof isVowel()).toBe("boolean");
+    });
+});

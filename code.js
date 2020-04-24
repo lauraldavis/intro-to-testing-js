@@ -15,3 +15,7 @@ function isFive(input) {
 function isEven(input) {
     return ( (typeof input === "string" || typeof input === "number") && parseFloat(input) % 2 === 0 ) ? true : false;
 }
+
+function isVowel() {
+    return true;
+}
