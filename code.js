@@ -10,12 +10,12 @@ function sayHello(input) {
 
 // isFive function
 function isFive(input) {
-    return (input == 5 && (typeof input === "number" || typeof input === "string"));
+    return (typeof input === "number" || typeof input === "string") && input == 5;
 }
 
 // isEven function
 function isEven(input) {
-    return ((typeof input === "string" || typeof input === "number") && parseFloat(input) % 2 === 0);
+    return (typeof input === "number" || typeof input === "string") && parseFloat(input) % 2 === 0;
 }
 
 // isVowel function
